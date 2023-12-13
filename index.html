@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>text RPG</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="character">
+      Персонаж:
+      <p>Здоровье:<span id="hit-points"></span></p>
+      <p>Золото:<span id="money"></span></p>
+      <p>Зелий здоровья:<span id="potion"></span></p>
+    </div>
+    <div class="root main">
+      <h1 class="heading">Таверна</h1>
+      <ul class="btn-list">
+        <li class="button-item">
+          <button id="roulet" class="button">Покрутить рулетку</button>
+        </li>
+        <li class="button-item">
+          <button id="quests" class="button">Посмотреть задания</button>
+        </li>
+        <li class="button-item">
+          <button id="things" class="button">Посмотреть ассортимент</button>
+        </li>
+        <li class="button-item">
+          <button id="exitOnTropa" class="button">Выйти на тропу</button>
+        </li>
+      </ul>
+    </div>
+    <div class="roulet root invis">
+      <h1 class="heading">Рулетка</h1>
+      <ul class="btn-list">
+        <li class="button-item">
+          <button id="rouletDo" class="button">Покрутить рулетку</button>
+        </li>
+        <li class="button-item">
+          <button id="rouletBack" class="button">Назад</button>
+        </li>
+      </ul>
+    </div>
+    <div class="quests root invis">
+      <h1 class="heading">Задания</h1>
+      <ul class="btn-list">
+        <li class="button-item">
+          <button id="questsDo" class="button">Посмотреть задания</button>
+        </li>
+        <li class="button-item">
+          <button id="questsBack" class="button">Назад</button>
+        </li>
+      </ul>
+    </div>
+    <div class="things root invis">
+      <h1 class="heading">Ассортимент</h1>
+      <ul class="btn-list">
+        <li class="button-item">
+          <button id="thingsDo" class="button">Посмотреть ассортимент</button>
+        </li>
+        <li class="button-item">
+          <button id="thingsBack" class="button">Назад</button>
+        </li>
+      </ul>
+    </div>
+    <div class="exitOnTropa root invis">
+      <h1 class="heading">Выйти на тропу</h1>
+      <ul class="btn-list">
+        <li class="button-item">
+          <button id="exitOnTropaDo" class="button">Напасть на скелета</button>
+        </li>
+        <li class="button-item">
+          <button id="exitOnTropaBack" class="button">Назад</button>
+        </li>
+      </ul>
+    </div>
+    <template id="popup">
+      <div class="popup">
+        <div class="content">
+          <button class="closePopup">Назад</button>
+        </div>
+        <div class="overlay"></div>
+      </div>
+    </template>
+    <template id="roulet-content">
+      <p>Результат:</p>
+      <div class="res-bg">
+        <span class="res"></span>
+      </div>
+      <ul class="btn-list">
+        <li class="button-item">
+          <button id="spin" class="button">Крутить</button>
+        </li>
+      </ul>
+    </template>
+    <template id="quests-content">
+      <div class="quest">
+        <h2>Убить скелета</h2>
+        <p>награда: 50 монет</p>
+        <button class="acces-quest">Принять</button>
+      </div>
+    </template>
+    <template id="store-content">
+      <h2>Магазин</h2>
+      <p>Зелье</p>
+      <p>Стоимость 50 монет</p>
+      <button id="buyPotion" class="button">Купить зелье</button>
+    </template>
+    <template id="battle-content">
+      <h2>Бой со скелетом</h2>
+      <div class="battle">
+        <div class="heroes">
+          <div class="hero">
+            <h3>Герой</h3>
+            <p>Здоровье:<span id="hero-hp">200</span></p>
+          </div>
+          <div class="hero">
+            <h3>Скелет</h3>
+            <p>Здоровье:<span id="skelet-hp">100</span></p>
+          </div>
+          <span id="count"></span>
+        </div>
+        <ul class="button-list">
+          <li class="button-item">
+            <button id="attack" class="button">Атаковать</button>
+          </li>
+          <li class="button-item">
+            <button id="heal" class="button">Выпить зелье</button>
+          </li>
+          <li class="button-item">
+            <button id="exit" class="button">Покинуть бой</button>
+          </li>
+        </ul>
+      </div>
+    </template>
+    <script src="./index.js"></script>
+  </body>
+</html>

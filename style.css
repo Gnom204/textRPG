@@ -1,0 +1,107 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-item {
+  list-style-type: none;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.btn-list {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 800px;
+}
+.character {
+  max-width: 200px;
+  border: solid black 1px;
+}
+
+.character p {
+  margin: 0;
+}
+
+.invis {
+  display: none;
+}
+
+.active {
+  display: flex;
+}
+
+.bg-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.5;
+}
+.popup {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 300px;
+  z-index: 2;
+  background-color: white;
+}
+
+.res-bg {
+  border: 1px black solid;
+}
+
+.quest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  margin: 50px 0 0 0;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px #666;
+}
+
+.battle {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 10px;
+  justify-content: space-around;
+}
